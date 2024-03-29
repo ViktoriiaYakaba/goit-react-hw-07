@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectContacts } from '../redux/contactsSlice';
-import { selectNameFilter } from '../redux/filtersSlice';
+import { selectFilteredContacts } from '../redux/filtersSlice';
 import Contact from './Contact';
 
 const listItemStyles = {
@@ -10,12 +9,8 @@ const listItemStyles = {
 }
 
 const ContactList = () => {
-  const allContacts = useSelector(selectContacts);
-   const nameFilter = useSelector(selectNameFilter);
+  const filteredContacts = useSelector(selectFilteredContacts);
 
-   const filteredContacts = allContacts.filter(contact =>
-    contact.name.toLowerCase().includes(nameFilter.toLowerCase())
-   );
   
   
   return (
