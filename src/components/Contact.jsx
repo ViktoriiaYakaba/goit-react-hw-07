@@ -9,13 +9,16 @@ const Contact = ({ contact }) => {
     dispatch(deleteContact(contact.id));
   };
 
+  console.log(contact)
+
   return (
     <li className={css.list}>
       <p>Name: {contact.name}</p>
-      <p>Phone Number: {contact.phoneNumber}</p> 
+      <p>Number: {contact.number}</p> 
       <button onClick={handleDelete} className={css.btn}>Delete</button>
     </li>
   );
 };
 
 export default Contact;
+

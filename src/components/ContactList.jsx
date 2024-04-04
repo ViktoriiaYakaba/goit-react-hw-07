@@ -11,14 +11,12 @@ const listItemStyles = {
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
 
-  
-  
   return (
     <div>
-      <h2 >Contact List</h2>
+      <h2>Contact List</h2>
       <ul style={listItemStyles}>
         {filteredContacts.map(contact => (
-        <Contact key={contact.id} contact={contact} />
+          <Contact key={contact.id} contact={contact} />
         ))}
       </ul>
     </div>
@@ -26,3 +24,4 @@ const ContactList = () => {
 };
 
 export default ContactList;
+
